@@ -61,14 +61,17 @@ import numpy as np
 # print(a) 
 
 
-f1=np.loadtxt("al.txt",dtype=int)
+f1=np.loadtxt("D:/GitHub/kittu02/.vscode/al.txt",dtype=int)
 print(f1)
+print("\n")
+f1=np.loadtxt("D:\GitHub\kittu02\.vscode\sk.txt",skiprows=0,dtype=str)
+print(f1)
+print("\n")
 
-# f1=np.loadtxt("sk.txt",skiprows=0,dtype=str)
-# print(f1)
-# f1=np.loadtxt("dj.txt",usecols=1,skiprows=1,dtype=str)
-# for i in f1:
-#     print(f1)
-# f1=np.genfromtxt("fh.txt",dtypr=str,encoding=None,delimiter=",")
-# print(f1)
+f1=np.loadtxt("D:\GitHub\kittu02\.vscode\dj.txt",dtype=str)
+print(f1)
+print("\n")
 
+f1=np.genfromtxt("D:/GitHub/kittu02/.vscode/fh.txt",dtype=str,delimiter=",")
+print(f1)
+print("\n")
