@@ -1,0 +1,1 @@
+print("A brown fox jumped over a Lazy Dog")
