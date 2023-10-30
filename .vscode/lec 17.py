@@ -44,13 +44,13 @@ from scipy import fftpack
 # print(i)
 
 # # Task 5: SciPy Interpolation (1)
-import numpy as np  
-from scipy import interpolate  
-import matplotlib.pyplot as plt  
-x = np.linspace(0, 5, 10)  
-y = np.cos(x**2/3+4) 
-plt.scatter(x,y,c='r')  
-plt.show()
+# import numpy as np  
+# from scipy import interpolate  
+# import matplotlib.pyplot as plt  
+# x = np.linspace(0, 5, 10)  
+# y = np.cos(x**2/3+4) 
+# plt.scatter(x,y,c='g')  
+# plt.show()
 
 # # Task 6: SciPy Interpolation (2)
 # from scipy.interpolate import interp1d  
@@ -89,21 +89,20 @@ plt.show()
 # # Solution Array  
 # b = np.array([[-3], [13], [5]])  
 # # Solve the linear algebra  
-# x = linalg.solve(a, b)  
+# x = linalg.solve(a, b) 
 # # Print results  
 # print(x)  
 # # Checking Results  
 # print("\n Checking results,must be zeros")  
 # print(a.dot(x) - b)
 
-# # Task 9: Finding a determinant of a square matrix
-# from scipy import linalg
-# import numpy as np
-  
-# A = np.array([[1,2,9],[3,4,8],[7,8,4]])
-# x = linalg.det(A)
-# #printing the result
-# print('Determinant of \n{} \n is {}'.format(A,x))
+# Task 9: Finding a determinant of a square matrix
+from scipy import linalg
+import numpy as np
+A = np.array([[1,2,9],[3,4,8],[7,8,4]])
+x = linalg.det(A)
+#printing the result
+print('Determinant of \n{} \n is {}'.format(A,x))
 
 # # Task 10: Eigenvalues and Eigenvectors
 
