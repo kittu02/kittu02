@@ -2,9 +2,9 @@
 
 
 # # Task 1: 
-# from matplotlib import pyplot as plt
-# import numpy as np 
-# import seaborn as sns
+from matplotlib import pyplot as plt
+import numpy as np 
+import seaborn as sns
 # sns.set_style("darkgrid")
 # #Frequency in terms of Hertz
 # fre  = 10
@@ -18,7 +18,7 @@
 # plt.show()
 
 # # Task 2 : SciPy FFTpack
-from scipy import fftpack
+# from scipy import fftpack
 # A = fftpack.fft(a)
 # frequency = fftpack.fftfreq(len(a)) * fre_samp
 # plt.stem(frequency, np.abs(A),use_line_collection=True)
@@ -47,8 +47,8 @@ from scipy import fftpack
 # import numpy as np  
 # from scipy import interpolate  
 # import matplotlib.pyplot as plt  
-# x = np.linspace(0, 5, 10)  
-# y = np.cos(x**2/3+4) 
+x = np.linspace(0, 5, 10)  
+y = np.cos(x**2/3+4) 
 # plt.scatter(x,y,c='g')  
 # plt.show()
 
@@ -96,16 +96,16 @@ from scipy import fftpack
 # print("\n Checking results,must be zeros")  
 # print(a.dot(x) - b)
 
-# Task 9: Finding a determinant of a square matrix
-from scipy import linalg
-import numpy as np
-A = np.array([[1,2,9],[3,4,8],[7,8,4]])
-x = linalg.det(A)
-#printing the result
-print('Determinant of \n{} \n is {}'.format(A,x))
+# # Task 9: Finding a determinant of a square matrix
+# from scipy import linalg
+# import numpy as np
+# A = np.array([[1,2,9],[3,4,8],[7,8,4]])
+# x = linalg.det(A)
+# #printing the result
+# print('Determinant of \n{} \n is {}'.format(A,x))
+
 
 # # Task 10: Eigenvalues and Eigenvectors
-
 # from scipy import linalg
 # import numpy as np
 # A = np.array([[2,1,-2],[1,0,0],[0,1,0]])
@@ -141,6 +141,7 @@ print('Determinant of \n{} \n is {}'.format(A,x))
 
 
 # # Task 14: SciPy Ndimage( Blurring or Smoothing  Images )
+# import scipy
 # from scipy import ndimage,misc
 # import matplotlib.pyplot as plt
  
@@ -216,3 +217,40 @@ print('Determinant of \n{} \n is {}'.format(A,x))
 # plt.axis('off')
 # plt.title('Sobel filter', fontsize=20)
 # plt.show()
+
+
+
+
+##############################################################
+# # Task - 1 :- Calculating Inverses and Determinants With scipy.linalg
+# import numpy as np
+# from scipy.linalg import inv, det
+# rows = int(input("Enter The Number Of Rows :- "))
+# columns = int(input("Enter The Number Of Columns :- "))
+# A = np.empty((rows, columns))
+# if(rows == columns ) :    
+#     for i in range(0,rows) :
+#         for j in range(0,columns) :
+#             element = int(input(f"Enter The Integer On {i + 1 } th Row and {j + 1 } th Columns :- "))
+#             A[i][j] = element
+#     A_inv = inv(A)
+#     det_A = det(A)
+#     print("Original Matrix A:")
+#     print(A)
+#     print("Inverse of A:")
+#     print(A_inv)
+#     print("Determinant of A:", det_A)  
+# else :
+#     print("Enter Valid Dimmenssions Of A Matrix.")
+
+
+# Task - 2 :- Interpolating Polynomials with Linear Systems (Y = P(X) = a0 + a1X + a2X^2)
+import numpy as np
+from scipy.interpolate import lagrange
+
+x = np.array([0, 1, 2, 3])
+y = np.array([1, 3, 5, 7])
+p = lagrange(x, y)
+x_new = float(input("Enter The Value Of X to Get Value Of Y For The Function :- Y = P(X) = a0 + a1X + a2X^2 :- "))
+y_new = p(x_new)
+print(y_new)
